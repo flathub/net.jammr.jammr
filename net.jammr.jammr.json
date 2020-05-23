@@ -21,50 +21,6 @@
     ],
     "modules": [
         {
-            "name": "icons",
-            "buildsystem": "simple",
-            "build-commands": [
-                "install -Dm644 jammr.png /app/share/icons/hicolor/48x48/apps/net.jammr.jammr.png",
-                "install -Dm644 jammr.svg /app/share/icons/hicolor/scalable/apps/net.jammr.jammr.svg"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "path": "jammr.png"
-                },
-                {
-                    "type": "file",
-                    "path": "jammr.svg"
-                }
-            ]
-        },
-        {
-            "name": "application metainfo",
-            "buildsystem": "simple",
-            "build-commands": [
-                "install -Dm644 net.jammr.jammr.metainfo.xml /app/share/metainfo/net.jammr.jammr.metainfo.xml"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "path": "net.jammr.jammr.metainfo.xml"
-                }
-            ]
-        },
-        {
-            "name": "desktop",
-            "buildsystem": "simple",
-            "build-commands": [
-                "install -Dm644 net.jammr.jammr.desktop /app/share/applications/net.jammr.jammr.desktop"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "path": "net.jammr.jammr.desktop"
-                }
-            ]
-        },
-        {
             "name": "portaudio",
             "config-opts": [
                 "--disable-static",
@@ -104,18 +60,7 @@
         {
             "name": "jammr",
             "buildsystem": "qmake",
-            "config-opts": [
-                "QTCLIENT_TARGET=jammr",
-                "VERSION=1.2.8",
-                "APPNAME=jammr",
-                "ORGNAME=jammr",
-                "ORGDOMAIN=jammr.net",
-                "JAMMR_API_URL=https://jammr.net/api/",
-                "JAMMR_REGISTER_URL=https://jammr.net/accounts/register/",
-                "JAMMR_UPGRADE_URL=https://jammr.net/pricing.html",
-                "JAMMR_UPDATE_URL=https://jammr.net/static/latest-linux.txt",
-                "JAMMR_DOWNLOAD_URL=https://jammr.net/download.html"
-            ],
+            "config-opts": ["CONFIG+=jammr", "CONFIG+=qtclient"],
             "make-install-args": [
                 "INSTALL_ROOT=/app"
             ],
@@ -123,11 +68,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/wahjam/wahjam.git",
-                    "tag": "jammr-1.2.8"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/wahjam/avoid-zero-length-vla.patch"
+                    "tag": "1.3.0-rc1"
                 }
             ]
         }
