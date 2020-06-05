@@ -10,7 +10,8 @@
         "--socket=x11",
         "--socket=pulseaudio",
         "--share=network",
-        "--device=all"
+        "--device=all",
+        "--filesystem=home"
     ],
     "cleanup": [
         "/include",
