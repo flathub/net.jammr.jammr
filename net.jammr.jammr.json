@@ -11,6 +11,7 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
+        "--device=shm",
         "--filesystem=home"
     ],
     "cleanup": [
