@@ -31,8 +31,13 @@
             ],
             "sources": [
                 {
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 10597,
+                        "url-template": "http://files.portaudio.com/archives/pa_stable_v$version.tgz"
+                    },
                     "type": "archive",
-                    "url": "http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz",
+                    "url": "http://files.portaudio.com/archives/pa_stable_v190600_20161030.tgz",
                     "sha256": "f5a21d7dcd6ee84397446fa1fa1a0675bb2e8a4a6dceb4305a8404698d8d1513"
                 }
             ]
@@ -47,13 +52,17 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/portmedia/portmidi/217/portmidi-src-217.zip",
-                    "sha256": "08e9a892bd80bdb1115213fb72dc29a7bf2ff108b378180586aa65f3cfd42e0f"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/portmidi/portmidi-no-java.patch"
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/PortMidi/portmidi/releases/latest",
+                        "tag-query": ".tag_name",
+                        "version-query": "$tag | sub(\"^v\"; \"\")",
+                        "timestamp-query": ".published_at"
+                    },
+                    "type": "git",
+                    "url": "https://github.com/PortMidi/portmidi.git",
+                    "tag": "v2.0.4",
+                    "commit": "b808babecdc5d05205467dab5c1006c5ac0fdfd4"
                 }
             ],
             "cleanup": [
@@ -70,16 +79,27 @@
                 "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/app/bin",
                 "-DBUILD_TRANSLATIONS=off"
             ],
+            "modules": [
+                "shared-modules/libsecret/libsecret.json"
+            ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/frankosterfeld/qtkeychain/archive/v0.10.0.tar.gz",
-                    "sha256": "5f916cd97843de550467db32d2e10f218b904af5b21cfdfcc7c6425d7dfc3ec2"
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/frankosterfeld/qtkeychain/releases/latest",
+                        "tag-query": ".tag_name",
+                        "version-query": ".name",
+                        "timestamp-query": ".published_at"
+                    },
+                    "type": "git",
+                    "url": "https://github.com/frankosterfeld/qtkeychain.git",
+                    "tag": "v0.13.2",
+                    "commit": "c236f9241e37f1754879cf8726d59351a2b2b24a"
                 }
             ],
             "cleanup": [
                 "/bin",
-		"/mkspecs",
+                "/mkspecs",
                 "/lib/cmake"
             ]
         },
