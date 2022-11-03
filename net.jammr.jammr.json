@@ -1,7 +1,7 @@
 {
     "id": "net.jammr.jammr",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.14",
+    "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "command": "jammr",
     "finish-args": [
