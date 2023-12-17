@@ -91,8 +91,8 @@
                     },
                     "type": "git",
                     "url": "https://github.com/frankosterfeld/qtkeychain.git",
-                    "tag": "v0.14.0",
-                    "commit": "e63da2868465db18eb35a312b2635c26fdc46923"
+                    "tag": "0.14.2",
+                    "commit": "8eac9889775ca45c106d077bb0d3744754a1570a"
                 }
             ],
             "cleanup": [
