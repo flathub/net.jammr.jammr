@@ -59,8 +59,8 @@
                     },
                     "type": "git",
                     "url": "https://github.com/PortMidi/portmidi.git",
-                    "tag": "v2.0.5",
-                    "commit": "9e029b5671c8eafe42fc998547d83475ae5d79ac"
+                    "tag": "v2.0.6",
+                    "commit": "07ae853a20c7484c7bde1893ed68c06a852dcf17"
                 }
             ],
             "cleanup": [
