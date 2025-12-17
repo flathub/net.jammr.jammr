@@ -1,0 +1,25 @@
+From 2bd70055651a021fd7a9f6c3f674ffe78b600f8e Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <161761531+yakushabb@users.noreply.github.com>
+Date: Wed, 17 Dec 2025 15:45:01 +0300
+Subject: [PATCH] Fix appdata papercuts
+
+---
+ qtclient/net.jammr.jammr.metainfo.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/qtclient/net.jammr.jammr.metainfo.xml b/qtclient/net.jammr.jammr.metainfo.xml
+index c3083c6..1e121e1 100644
+--- a/qtclient/net.jammr.jammr.metainfo.xml
++++ b/qtclient/net.jammr.jammr.metainfo.xml
+@@ -24,7 +24,7 @@
+     <launchable type="desktop-id">net.jammr.jammr.desktop</launchable>
+     <screenshots>
+         <screenshot type="default">
+-            <image>https://jammr.net/static/screenshot.png</image>
++            <image>https://dl.flathub.org/media/net/jammr/jammr/78954052dfcca17b1e372a9791927969/screenshots/image-1_orig.webp</image>
+         </screenshot>
+     </screenshots>
+     <project_license>GPL-2.0-or-later</project_license>
+--
+libgit2 1.7.2
+
